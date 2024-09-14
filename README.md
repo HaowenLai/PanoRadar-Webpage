@@ -1,4 +1,4 @@
-# Webpage of PanoRadar
+# Website of PanoRadar
 This is the repository that contains source code for the PanoRadar website.
 
 Our paper: **Enabling Visual Recognition at Radio Frequency**
