@@ -80,9 +80,9 @@
               <a href="https://gaoxiangluo.github.io">Gaoxiang Luo</a>&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="">Yifei Liu</a>&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="https://www.cis.upenn.edu/~mingminz">Mingmin Zhao</a>
-              <br /> University of Pennsylvania
+              <br/> University of Pennsylvania
               <span class="brmod"><strong><a href="https://sigmobile.org/mobicom/2024/index.html">MobiCom 2024</a></strong></span>
-              <br />
+              <br/>
               <div>
                 <img src='https://github.com/HaowenLai/PanoRadar-Website/raw/refs/heads/master/resources/images/artifacts_available_v1_1.png' width=100px>
                 <img src='https://github.com/HaowenLai/PanoRadar-Website/raw/refs/heads/master/resources/images/artifacts_evaluated_functional_v1_1.png' width=100px>
@@ -122,7 +122,7 @@
               </span> -->
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="xxxx"
+                <a href="#demo-video"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -147,7 +147,7 @@
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data (coming soon)</span>
+                  <span>Dataset</span>
                 </a>
               </span>
               <!-- Slides Link. -->
@@ -175,19 +175,19 @@
         <source src="resources/videos/teaser.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="panoradar">PanoRadar</span> turns radio frequency (RF) reflections into panoramic visual recognition maps. 
+        <span class="panoradar">PanoRadar</span> is a novel RF imaging system capable of 3D panoramic sensing. 
+        Its high-resolution imaging results enable a variety of visual recognition tasks at radio frequency.
       </h2>
     </div>
   </div>
 </section>
 
+<!-- Abstract. -->
 <section class="section">
   <div class="container">
-
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2">Abstract</h2>
+        <h3 class="title is-3">Abstract</h3>
         <div class="content has-text-justified">
           <p>
             <span class="panoradar">PanoRadar</span> is the first RF imaging system that brings RF resolution close to that of LiDAR, 
@@ -207,41 +207,64 @@
         </div>
       </div>
     </div>
-  <!--/ Abstract. -->
-
-  <!-- Paper video. -->
-  <!-- <div id="video" class="columns is-centered has-text-centered">
-    <div class="column is-two-thirds">
-      <h2 class="title is-2">Video</h2>
-      <div class="publication-video">
-        <iframe src="https://www.youtube.com/xxxx"
-                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div> -->
-  <!--/ Paper video. -->
- </div>
+  </div>
 </section>
 
-<section>
+
+<!-- Paper video. -->
+<section class="section">
   <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Overview</h2>
-    <div class="content has-text-centered">
-      <video id="matting-video" autoplay muted loop playsinline height="100%" width="80%">
-        <source src="resources/videos/overview.mp4" type="video/mp4">
-      </video>
+    <div id="demo-video" class="columns is-centered has-text-centered">
+      <div class="column is-three-quarters">
+        <h3 class="title is-3">Demo Video</h3>
+        <div class="publication-video">
+          <iframe type="text/html" width="1280" height="720" src="https://www.youtube.com/embed/tFBf3C5hNAY" 
+                  title="PanoRadar Demo Video" frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<br>
-<br>
 
-<section class="hero is-light is-small">
-  <br>
+
+<!-- Overview -->
+<section class="section">
   <div class="container">
-    <div class="columns is-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center;">Enhance Elevation Resolution</h2>
+        <h3 class="title is-3">System Overview</h3>
+        <div class="content has-text-centered">
+          <video id="matting-video" autoplay muted loop playsinline width="75%">
+            <source src="resources/videos/overview.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="content has-text-justified">
+          <p>This figure illustrates the system architecture of <span class="panoradar">PanoRadar</span>, consisting of four components:</p>
+          <ol>
+            <li><strong>3D imaging with a rotating radar:</strong> the radar's 8 antennas are placed vertically, which forms a dense 
+                cylindrical array (8&times;1200) when rotating.</li>
+            <li><strong>Motion estimation and compensation:</strong> our novel algorithms for accurate robot motion estimation, combined
+                with efficient imaging algorithms that include compensation, enable deployment on mobile robot platforms.</li>
+            <li><strong>Vertical resolution enhancement:</strong> due to limited number of vertical antennas, a resolution enhancement model
+                is used to for range image estimation. Our ML model efficiently learns 3D structures with 2D models.</li>
+            <li><strong>Downstream visual recognition tasks:</strong> the high-resolution range images enable various downstream recognition tasks,
+                including surface normal estimation, semantic segmentation, object detection, and human localization</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Enhance Elevation Resolution -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">Enhance Elevation Resolution</h2>
         <div class="content">
           <p>
             Our signal processing (SP) algorithm gives us a azimuth angular resolution of 1.47 degrees, 
@@ -307,9 +330,36 @@
   <br>
 </section>
 
+
+<!-- Code and Dataset -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">Code and Dataset</h3>
+        <img src='./resources/images/dataset.png' width="70%">
+        <br/><br/>
+        <div class="content has-text-justified">
+          <p>
+            Our system is evaluated across 12 diverse buildings, demonstrating its feasibility, accuracy, and robustness in various environments.
+            All ML methods are evaluated with a cross-building approach to ensure the generalization of our model.
+            Specifically, we left out each building for testing while using the rest for training, repeating this process 12 times, once for each building.
+          </p>
+          <p>
+            We release <a href="xxxx">code</a> and <a href="xxxx">dataset</a> to facilitate future research in this direction. Instructions can be found in
+            the readme of our github repo: <a href="xxxx">xxxxxx</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BibTeX citation -->
 <section class="section" id="BibTeX">
   <div class="container">
-    <h2 class="title">BibTeX</h2>
+    <h3 class="title">BibTeX</h3>
     <pre><code>@inproceedings{panoradar,
   title={Enabling Visual Recognition at Radio Frequency},
   author={Lai, Haowen and Luo, Gaoxiang and Liu, Yifei and Zhao, Mingmin},
@@ -320,12 +370,16 @@
   </div>
 </section>
 
+
+<!-- Acknowledgements -->
 <section class="section" id="Acknowledgements">
   <div class="container">
-    <h2 class="title">Acknowledgements</h2>
+    <h3 class="title">Acknowledgments</h3>
       <div class="is-vcentered interpolation-panel">
-          We sincerely thank the reviewers and our anonymous shepherd for their insightful comments and suggestions on improving this paper. This work was carried out in the Penn Waves Lab, University of Pennsylvania. We thank Rapid Prototyping Laboratory (RPL) at Penn Engineering for letting us use their laser cutters and 3D printers. 
-          We sincerely thank the anonymous reviewers and our shepherd for their insightful comments. We are grateful to Xin Yang, Zitong Lan, Dongyin Hu, Ahhyun Yuh, and Zhiwei Zheng for their feedback. We also thank Yiqiao Liao for his contributions during the early development of this project.
+        This work was carried out in the <a href="https://waveslab.seas.upenn.edu">WAVES Lab</a>, University of Pennsylvania.
+        We sincerely thank the anonymous reviewers and our shepherd for their insightful comments.
+        We are grateful to Xin Yang, Zitong Lan, Dongyin Hu, Ahhyun Yuh, and Zhiwei Zheng for their feedback.
+        We also thank Yiqiao Liao for his contributions during the early development of this project.
       </div>
   </div>
 </section>
