@@ -12801,7 +12801,10 @@ print {
 .hero-body {
     flex-grow: 1;
     flex-shrink: 0;
-    padding: 3rem 1.5rem
+    padding-top: 3rem;
+    padding-bottom: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .section {
